@@ -96,3 +96,12 @@ The smoke test installs only the core and metadata adapter in a disposable
 project, confirming they work without editor services or other addon libraries.
 This repository is currently local; configure an actual remote before adding a
 remote installation entry to the addon manifest.
+
+## Structured options
+
+Consumers can opt into `Scanner.Options.parse(entry.args)` (also available through
+Registry). It returns `{options, errors}` without changing raw scanner metadata.
+Options are flags or `key=value` strings separated by whitespace/commas; quoted values
+may contain separators. Duplicate names and malformed input return errors and no
+usable options. Each consumer validates its own supported names and value types.
+For example, `#! inline; substitute` produces `{substitute: true}`.
