@@ -2,8 +2,6 @@ extends Singletons.Base
 
 const CacheHelper = preload("res://addons/addon_lib/brohd/alib_runtime/cache_helper/cache_helper.gd")
 const EditorGDScriptParser = preload("uid://t2dewmuth0sy") #! resolve ALibEditor.Singleton.EditorGDScriptParser
-const GDScriptParser = EditorGDScriptParser.GDScriptParser
-const UString = preload("uid://cwootkivqiwq1") #! resolve ALibRuntime.Utils.UString
 
 # Use 'PE_STRIP_CAST_SCRIPT' to auto strip type casts with plugin exporter, if the class is not a global name
 const PE_STRIP_CAST_SCRIPT = preload("res://addons/addon_lib/tag_parser/editor/tag_parser.gd")
